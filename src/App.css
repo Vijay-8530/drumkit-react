@@ -13,7 +13,7 @@ html {
   .keys {
     display: flex;
     flex: 1;
-    min-height: 35vh;
+    min-height: 25vh;
     align-items: center;
     justify-content: center;
   }
@@ -35,10 +35,8 @@ html {
   .playing {
     transform: scale(1.1);
     box-shadow: 0 0 1rem #ffc600;
-  }
-  .border-color {
     border-color: #ffc600;
-  
+
   }
   
   
