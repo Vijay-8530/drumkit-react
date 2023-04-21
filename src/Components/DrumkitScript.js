@@ -37,9 +37,8 @@ const DrumkitScript = () => {
     window.addEventListener('keydown', playSound)
   }, [])
   function playSound(e) {
-    console.log(e,e.keyCode)
-    const audio = document.querySelector(`audio`)
-    const key = document.querySelector(`.key`)
+    const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`)
+    const key = document.querySelector(`.key[data-key="${e.keyCode}"]`)
     console.log(audio, key)
 
     if (!audio) return;
@@ -78,39 +77,39 @@ const DrumkitScript = () => {
       </div>
       <div className="keys">
         <DrumkitKey dataKey={65} alfa={"A"} onTransitionEnd={removeTransition} />
-        <DrumkitAudio dataKey={80} music={Clap}  ></DrumkitAudio>
+        <DrumkitAudio dataKey={65} music={Clap}  ></DrumkitAudio>
         <DrumkitKey dataKey={83} alfa={"S"} onTransitionEnd={removeTransition} />
-        <DrumkitAudio dataKey={80} music={Hihat} ></DrumkitAudio>
+        <DrumkitAudio dataKey={83} music={Hihat} ></DrumkitAudio>
         <DrumkitKey dataKey={68} alfa={"D"} onTransitionEnd={removeTransition} />
-        <DrumkitAudio dataKey={80} music={Kick}  ></DrumkitAudio>
+        <DrumkitAudio dataKey={68} music={Kick}  ></DrumkitAudio>
         <DrumkitKey dataKey={70} alfa={"F"} onTransitionEnd={removeTransition} />
-        <DrumkitAudio dataKey={80} music={OpenHet}  ></DrumkitAudio>
+        <DrumkitAudio dataKey={70} music={OpenHet}  ></DrumkitAudio>
         <DrumkitKey dataKey={71} alfa={"G"} onTransitionEnd={removeTransition} />
-        <DrumkitAudio dataKey={80} music={Ride}  ></DrumkitAudio>
+        <DrumkitAudio dataKey={71} music={Ride}  ></DrumkitAudio>
         <DrumkitKey dataKey={72} alfa={"H"} onTransitionEnd={removeTransition} />
-        <DrumkitAudio dataKey={80} music={Boom} ></DrumkitAudio>
+        <DrumkitAudio dataKey={72} music={Boom} ></DrumkitAudio>
         <DrumkitKey dataKey={74} alfa={"J"} onTransitionEnd={removeTransition} />
-        <DrumkitAudio dataKey={80} music={Snare}   ></DrumkitAudio>
+        <DrumkitAudio dataKey={74} music={Snare}   ></DrumkitAudio>
         <DrumkitKey dataKey={75} alfa={"K"} onTransitionEnd={removeTransition} />
-        <DrumkitAudio dataKey={80} music={Tom} ></DrumkitAudio>
+        <DrumkitAudio dataKey={75} music={Tom} ></DrumkitAudio>
         <DrumkitKey dataKey={76} alfa={"L"} onTransitionEnd={removeTransition} />
-        <DrumkitAudio dataKey={80} music={Tink}  ></DrumkitAudio>
+        <DrumkitAudio dataKey={76} music={Tink}  ></DrumkitAudio>
       </div>
       <div className="keys">
         <DrumkitKey dataKey={90} alfa={"Z"} onTransitionEnd={removeTransition} />
-        <DrumkitAudio dataKey={80} music={L21}  ></DrumkitAudio>
+        <DrumkitAudio dataKey={90} music={L21}  ></DrumkitAudio>
         <DrumkitKey dataKey={88} alfa={"X"} onTransitionEnd={removeTransition} />
-        <DrumkitAudio dataKey={80} music={L22}  ></DrumkitAudio>
+        <DrumkitAudio dataKey={88} music={L22}  ></DrumkitAudio>
         <DrumkitKey dataKey={67} alfa={"C"} onTransitionEnd={removeTransition} />
-        <DrumkitAudio dataKey={80} music={L23}  ></DrumkitAudio>
+        <DrumkitAudio dataKey={67} music={L23}  ></DrumkitAudio>
         <DrumkitKey dataKey={86} alfa={"V"} onTransitionEnd={removeTransition} />
-        <DrumkitAudio dataKey={80} music={L24}  ></DrumkitAudio>
+        <DrumkitAudio dataKey={86} music={L24}  ></DrumkitAudio>
         <DrumkitKey dataKey={66} alfa={"B"} onTransitionEnd={removeTransition} />
-        <DrumkitAudio dataKey={80} music={L25}  ></DrumkitAudio>
+        <DrumkitAudio dataKey={66} music={L25}  ></DrumkitAudio>
         <DrumkitKey dataKey={78} alfa={"N"} onTransitionEnd={removeTransition} />
-        <DrumkitAudio dataKey={80} music={L26}  ></DrumkitAudio>
+        <DrumkitAudio dataKey={78} music={L26}  ></DrumkitAudio>
         <DrumkitKey dataKey={77} alfa={"M"} onTransitionEnd={removeTransition} />
-        <DrumkitAudio dataKey={80} music={L27}  ></DrumkitAudio>
+        <DrumkitAudio dataKey={77} music={L27}  ></DrumkitAudio>
       </div>
     </>
   )
